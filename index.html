@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DASH LABS — Design × AI Studio | Websites, AI Bots & Branding India</title>
+<meta name="description" content="Dash Labs builds websites, WhatsApp bots, AI chatbots, branding & custom AI tools for businesses in India. Ship in days, not months. Fair pricing from ₹8K.">
+<meta name="keywords" content="web design India, AI chatbot development, WhatsApp bot, branding agency, website development, LLM tools, Dash Labs">
+<meta name="author" content="Dash Labs">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#171717">
+<link rel="canonical" href="https://dashlabs.co.in/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dashlabs.co.in/">
+<meta property="og:title" content="DASH LABS — Design × AI Studio">
+<meta property="og:description" content="Websites, bots, AI tools, branding — shipped in days, not months. One team. Fair pricing.">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Dash Labs">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DASH LABS — Design × AI Studio">
+<meta name="twitter:description" content="Websites, bots, AI tools, branding — shipped in days, not months. One team. Fair pricing.">
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dash Labs",
+  "url": "https://dashlabs.co.in",
+  "description": "Design and AI studio building websites, WhatsApp bots, AI chatbots, branding and custom AI tools for businesses in India.",
+  "email": "hello@dashlabs.in",
+  "areaServed": "IN",
+  "serviceType": ["Web Design", "AI Chatbot Development", "WhatsApp Bot Development", "Branding", "AI Tools", "App Development"],
+  "knowsAbout": ["Web Development", "Artificial Intelligence", "Chatbots", "WhatsApp API", "UI/UX Design", "Branding"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root {
+  --bg: #FAFAF9;
+  --bg-dark: #171717;
+  --card: #FFFFFF;
+  --card-dark: #1E1E1E;
+  --text: #171717;
+  --text-2: #525252;
+  --text-3: #A3A3A3;
+  --accent: #F97316;
+  --accent-2: #FB923C;
+  --green: #22C55E;
+  --blue: #3B82F6;
+  --violet: #8B5CF6;
+  --border: rgba(0,0,0,0.06);
+  --border-2: rgba(0,0,0,0.1);
+  --glow: rgba(249,115,22,0.12);
+  --r: 16px;
+  --r-sm: 10px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.5}
+/* ====== UTILITY ====== */
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+.mono{font-family:'Fira Code',monospace}
+/* ====== NAV ====== */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(250,250,249,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:900;font-size:1.2rem;letter-spacing:-0.03em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:8px}
+.logo-mark{width:30px;height:30px;background:var(--bg-dark);border-radius:8px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:5px;transform:rotate(-6deg)}
+.logo-mark span{background:var(--accent);border-radius:2px}
+.logo-mark span:nth-child(2){background:#fff}
+.logo-mark span:nth-child(3){background:#fff}
+.nav-r{display:flex;align-items:center;gap:24px}
+.nav-r a{font-size:.88rem;font-weight:500;color:var(--text-2);text-decoration:none;transition:.2s}
+.nav-r a:hover{color:var(--text)}
+.nav-cta{background:var(--bg-dark)!important;color:#fff!important;padding:10px 22px!important;border-radius:100px!important;font-weight:600!important;transition:all .2s!important}
+.nav-cta:hover{background:#333!important;transform:translateY(-1px)}
+.mob-tog{display:none;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text)}
+/* ====== HERO ====== */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;position:relative;overflow:hidden}
+.hero-grid-bg{position:absolute;inset:0;background-image:
+  linear-gradient(rgba(0,0,0,.02) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(0,0,0,.02) 1px,transparent 1px);
+  background-size:64px 64px;pointer-events:none}
+.hero-gradient{position:absolute;top:-20%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,rgba(249,115,22,.08) 0%,rgba(251,146,60,.04) 40%,transparent 70%);pointer-events:none}
+.hero-gradient-2{position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,.05) 0%,transparent 60%);pointer-events:none}
+.hero-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero-left{max-width:520px}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;font-family:'Fira Code',monospace;font-size:.72rem;color:var(--accent);background:var(--glow);border:1px solid rgba(249,115,22,.15);padding:6px 14px;border-radius:100px;margin-bottom:28px;animation:fadeUp .6s ease both}
+.hero-tag .blink{animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+h1{font-size:clamp(2.6rem,4.8vw,3.6rem);font-weight:900;line-height:1.08;letter-spacing:-.035em;margin-bottom:20px;animation:fadeUp .6s .1s ease both}
+h1 .grad{background:linear-gradient(135deg,var(--accent),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-p{font-size:1.05rem;color:var(--text-2);line-height:1.7;margin-bottom:36px;max-width:420px;font-weight:400;animation:fadeUp .6s .2s ease both}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s .3s ease both}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;background:var(--bg-dark);color:#fff;font-weight:600;font-size:.92rem;border:none;border-radius:12px;cursor:pointer;transition:all .2s;text-decoration:none;font-family:inherit}
+.btn-dark:hover{background:#333;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.btn-ghost{display:inline-flex;align-items:center;gap:6px;padding:14px 24px;background:transparent;color:var(--text);font-weight:600;font-size:.92rem;border:1.5px solid var(--border-2);border-radius:12px;cursor:pointer;transition:all .2s;text-decoration:none;font-family:inherit}
+.btn-ghost:hover{border-color:var(--text-3);background:white}
+/* Hero Right — Code Terminal */
+.hero-visual{animation:fadeUp .7s .3s ease both}
+.terminal{background:var(--bg-dark);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12);border:1px solid rgba(255,255,255,.06)}
+.terminal-bar{display:flex;align-items:center;gap:7px;padding:14px 18px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+.terminal-dot{width:11px;height:11px;border-radius:50%}
+.td-r{background:#FF5F57}
+.td-y{background:#FEBC2E}
+.td-g{background:#28C840}
+.terminal-title{font-family:'Fira Code',monospace;font-size:.65rem;color:rgba(255,255,255,.35);margin-left:auto}
+.terminal-body{padding:22px;font-family:'Fira Code',monospace;font-size:.78rem;line-height:2;color:rgba(255,255,255,.5)}
+.terminal-body .cmd{color:rgba(255,255,255,.85)}
+.terminal-body .flag{color:var(--accent)}
+.terminal-body .str{color:var(--green)}
+.terminal-body .comment{color:rgba(255,255,255,.25);font-style:italic}
+.terminal-body .result{color:var(--blue)}
+.cursor-line::after{content:'▋';color:var(--accent);animation:blink 1s step-end infinite}
+.terminal-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)}
+.terminal-tags span{font-size:.62rem;padding:4px 10px;border-radius:100px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.4);font-family:'Fira Code',monospace}
+/* ====== SERVICES — BENTO GRID ====== */
+.services{padding:100px 0}
+.section-head{margin-bottom:48px}
+.section-head .mono{font-size:.72rem;color:var(--accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px}
+.section-head h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:1.12}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(180px,auto);gap:12px}
+.b-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px 26px;position:relative;overflow:hidden;transition:all .3s;display:flex;flex-direction:column;justify-content:space-between}
+.b-card:hover{border-color:var(--border-2);box-shadow:0 8px 32px rgba(0,0,0,.04);transform:translateY(-2px)}
+.b-card .emoji{font-size:1.8rem;margin-bottom:auto}
+.b-card h3{font-size:1.05rem;font-weight:700;letter-spacing:-.01em;margin-top:16px}
+.b-card .price{font-family:'Fira Code',monospace;font-size:.7rem;color:var(--accent);margin-top:6px}
+.b-card .mini-visual{position:absolute;bottom:0;right:0;opacity:.06;font-size:6rem;line-height:1;pointer-events:none}
+/* Bento sizes */
+.b1{grid-column:span 4}
+.b2{grid-column:span 4}
+.b3{grid-column:span 4}
+.b4{grid-column:span 6}
+.b5{grid-column:span 3}
+.b6{grid-column:span 3}
+.b7{grid-column:span 4}
+.b8{grid-column:span 4}
+.b9{grid-column:span 4}
+/* Colored top borders */
+.b-orange{border-top:2px solid var(--accent)}
+.b-green{border-top:2px solid var(--green)}
+.b-blue{border-top:2px solid var(--blue)}
+.b-violet{border-top:2px solid var(--violet)}
+.b-dark{background:var(--bg-dark);color:#fff;border-color:rgba(255,255,255,.06)}
+.b-dark:hover{border-color:rgba(255,255,255,.12)}
+.b-dark h3{color:#fff}
+.b-dark .price{color:var(--accent-2)}
+/* ====== PROOF BAR ====== */
+.proof{padding:64px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.proof-row{display:flex;justify-content:center;gap:56px;flex-wrap:wrap}
+.proof-item{text-align:center}
+.proof-num{font-size:2.2rem;font-weight:900;letter-spacing:-.03em}
+.proof-num .accent{color:var(--accent)}
+.proof-label{font-size:.78rem;color:var(--text-3);font-weight:500;margin-top:2px}
+/* ====== APPROACH — HORIZONTAL SCROLL ====== */
+.approach{padding:100px 0}
+.approach-track{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-2);border-radius:var(--r);overflow:hidden;margin-top:48px}
+.a-step{background:var(--card);padding:36px 28px}
+.a-num{font-family:'Fira Code',monospace;font-size:.65rem;color:var(--accent);margin-bottom:20px;letter-spacing:.05em}
+.a-step h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.a-step p{font-size:.82rem;color:var(--text-2);line-height:1.55}
+.a-time{font-family:'Fira Code',monospace;font-size:.65rem;color:var(--text-3);margin-top:18px;padding-top:14px;border-top:1px solid var(--border)}
+/* ====== CTA / CONTACT ====== */
+.cta-section{padding:60px 0 120px}
+.cta-card{background:var(--bg-dark);border-radius:24px;padding:72px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;overflow:hidden}
+.cta-card::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(249,115,22,.1),transparent 70%);top:-20%;right:-5%;pointer-events:none}
+.cta-card::after{content:'';position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(139,92,246,.08),transparent 70%);bottom:-20%;left:10%;pointer-events:none}
+.cta-left{position:relative;z-index:2}
+.cta-left h2{color:#fff;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;letter-spacing:-.03em;line-height:1.12;margin-bottom:16px}
+.cta-left p{color:rgba(255,255,255,.55);font-size:1rem;line-height:1.7;margin-bottom:32px;max-width:400px}
+.cta-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#25D366;color:#fff;font-weight:700;font-size:.92rem;border:none;border-radius:12px;cursor:pointer;transition:all .2s;text-decoration:none;font-family:inherit;box-shadow:0 4px 16px rgba(37,211,102,.3)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,211,102,.4)}
+.btn-light{display:inline-flex;align-items:center;gap:6px;padding:14px 28px;background:rgba(255,255,255,.08);color:#fff;font-weight:600;font-size:.92rem;border:1px solid rgba(255,255,255,.1);border-radius:12px;cursor:pointer;transition:all .2s;text-decoration:none;font-family:inherit}
+.btn-light:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2)}
+/* Right — Form */
+.cta-form{position:relative;z-index:2;display:flex;flex-direction:column;gap:14px}
+.cta-form input,.cta-form select,.cta-form textarea{padding:13px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-sm);color:#fff;font-family:inherit;font-size:.88rem;outline:none;transition:all .2s}
+.cta-form input::placeholder,.cta-form textarea::placeholder{color:rgba(255,255,255,.3)}
+.cta-form select{color:rgba(255,255,255,.5);cursor:pointer}
+.cta-form select option{background:var(--bg-dark);color:#fff}
+.cta-form input:focus,.cta-form select:focus,.cta-form textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(249,115,22,.12)}
+.cta-form textarea{resize:vertical;min-height:72px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cta-submit{padding:14px;background:var(--accent);color:#fff;font-weight:700;font-size:.92rem;border:none;border-radius:var(--r-sm);cursor:pointer;font-family:inherit;transition:all .2s}
+.cta-submit:hover{background:#EA580C;transform:translateY(-1px);box-shadow:0 4px 16px rgba(249,115,22,.3)}
+.f-note{font-size:.68rem;color:rgba(255,255,255,.3);text-align:center}
+/* ====== FOOTER ====== */
+footer{border-top:1px solid var(--border);padding:40px 0 28px}
+.footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:.82rem;color:var(--text-3);text-decoration:none;transition:.2s}
+.footer-links a:hover{color:var(--text)}
+.footer-copy{font-size:.78rem;color:var(--text-3)}
+/* ====== FLOATING WA ====== */
+.wa-float{position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;color:#fff;font-size:1.5rem;transition:all .3s}
+.wa-float:hover{transform:scale(1.08)}
+/* ====== ANIMATIONS ====== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+/* ====== RESPONSIVE ====== */
+@media(max-width:1024px){
+  .hero-layout{grid-template-columns:1fr;gap:48px}
+  .hero-visual{max-width:500px}
+  .bento{grid-template-columns:repeat(6,1fr)}
+  .b1,.b2,.b3{grid-column:span 3}
+  .b4{grid-column:span 6}
+  .b5,.b6{grid-column:span 3}
+  .b7,.b8,.b9{grid-column:span 3}
+  .approach-track{grid-template-columns:repeat(2,1fr)}
+  .cta-card{grid-template-columns:1fr;padding:48px 36px}
+}
+@media(max-width:768px){
+  .nav-r{display:none}
+  .mob-tog{display:block}
+  .nav-r.active{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(250,250,249,.97);backdrop-filter:blur(16px);padding:20px 24px;gap:16px;border-bottom:1px solid var(--border)}
+  .hero{min-height:auto;padding:110px 0 60px}
+  h1{font-size:2.2rem}
+  .bento{grid-template-columns:1fr 1fr}
+  .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9{grid-column:span 1}
+  .b4{grid-column:span 2}
+  .proof-row{gap:32px}
+  .approach-track{grid-template-columns:1fr}
+  .cta-card{padding:36px 24px}
+  .f-row{grid-template-columns:1fr}
+  .footer-row{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="#" class="logo">
+      <span class="logo-mark"><span></span><span></span><span></span><span></span></span>
+      DASH LABS
+    </a>
+    <button class="mob-tog" onclick="document.querySelector('.nav-r').classList.toggle('active')">☰</button>
+    <div class="nav-r">
+      <a href="#services">Services</a>
+      <a href="#approach">Process</a>
+      <a href="#contact" class="nav-cta">Start a project →</a>
+    </div>
+  </div>
+</nav>
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-gradient-2"></div>
+  <div class="container">
+    <div class="hero-layout">
+      <div class="hero-left">
+        <div class="hero-tag mono">
+          <span class="blink">▸</span> now accepting projects
+        </div>
+        <h1>Design + AI<br>for businesses<br>that <span class="grad">move fast.</span></h1>
+        <p class="hero-p">Websites, bots, AI tools, branding — shipped in days, not months. One team. Fair pricing.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-dark">Start a project ↗</a>
+          <a href="https://wa.me/919999999999?text=Hey%20Dash%20Labs!" class="btn-ghost">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="terminal-dot td-r"></span>
+            <span class="terminal-dot td-y"></span>
+            <span class="terminal-dot td-g"></span>
+            <span class="terminal-title">dash-labs — zsh</span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="comment">// what we shipped this week</span></div>
+            <div><span class="cmd">deploy</span> <span class="flag">--website</span> <span class="str">"freshbake.in"</span></div>
+            <div><span class="result">  ✓ live in 4 days · 98 lighthouse</span></div>
+            <br>
+            <div><span class="cmd">deploy</span> <span class="flag">--whatsapp-bot</span> <span class="str">"drSmileClinic"</span></div>
+            <div><span class="result">  ✓ 400+ appointments auto-booked</span></div>
+            <br>
+            <div><span class="cmd">deploy</span> <span class="flag">--ai-agent</span> <span class="str">"luxeInteriors"</span></div>
+            <div><span class="result">  ✓ 73% queries resolved without staff</span></div>
+            <br>
+            <div class="cursor-line"><span class="cmd">deploy</span> <span class="flag">--your-project</span> </div>
+            <div class="terminal-tags">
+              <span>react</span>
+              <span>next.js</span>
+              <span>claude</span>
+              <span>whatsapp-api</span>
+              <span>vercel</span>
+              <span>figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== PROOF ====== -->
+<div class="proof">
+  <div class="container">
+    <div class="proof-row">
+      <div class="proof-item">
+        <div class="proof-num"><span class="accent">48</span>hr</div>
+        <div class="proof-label">First deliverable</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num"><span class="accent">1/3</span>×</div>
+        <div class="proof-label">Agency cost</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num"><span class="accent">10</span>×</div>
+        <div class="proof-label">AI-native speed</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num"><span class="accent">0</span></div>
+        <div class="proof-label">Lock-in contracts</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ====== SERVICES — BENTO ====== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="mono">Services</div>
+      <h2>Everything you need.<br>Nothing you don't.</h2>
+    </div>
+    <div class="bento">
+      <div class="b-card b1 b-orange">
+        <div class="emoji">🌐</div>
+        <div>
+          <h3>Websites</h3>
+          <div class="price">from ₹15K</div>
+        </div>
+        <div class="mini-visual">‹/›</div>
+      </div>
+      <div class="b-card b2 b-green">
+        <div class="emoji">💬</div>
+        <div>
+          <h3>WhatsApp Bots</h3>
+          <div class="price">from ₹20K</div>
+        </div>
+        <div class="mini-visual">◈</div>
+      </div>
+      <div class="b-card b3 b-blue">
+        <div class="emoji">🤖</div>
+        <div>
+          <h3>AI Chatbots</h3>
+          <div class="price">from ₹20K</div>
+        </div>
+        <div class="mini-visual">◎</div>
+      </div>
+      <div class="b-card b4 b-dark">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;width:100%">
+          <div>
+            <div class="emoji">⚡</div>
+            <h3>LLM Wrappers & AI Tools</h3>
+            <div class="price">from ₹30K</div>
+          </div>
+          <div style="font-family:'Fira Code',monospace;font-size:.65rem;color:rgba(255,255,255,.3);text-align:right;line-height:1.8;padding-top:4px">
+            knowledge bases<br>content engines<br>decision tools<br>custom GPTs
+          </div>
+        </div>
+      </div>
+      <div class="b-card b5 b-violet">
+        <div class="emoji">🎯</div>
+        <div>
+          <h3>Micro-Sites</h3>
+          <div class="price">from ₹8K</div>
+        </div>
+      </div>
+      <div class="b-card b6 b-orange">
+        <div class="emoji">✦</div>
+        <div>
+          <h3>Branding</h3>
+          <div class="price">from ₹12K</div>
+        </div>
+      </div>
+      <div class="b-card b7">
+        <div class="emoji">🔄</div>
+        <div>
+          <h3>Automation</h3>
+          <div class="price">from ₹10K</div>
+        </div>
+      </div>
+      <div class="b-card b8">
+        <div class="emoji">🛠</div>
+        <div>
+          <h3>Internal Tools</h3>
+          <div class="price">from ₹20K</div>
+        </div>
+      </div>
+      <div class="b-card b9">
+        <div class="emoji">📱</div>
+        <div>
+          <h3>App MVPs</h3>
+          <div class="price">from ₹40K</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== APPROACH ====== -->
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="section-head">
+      <div class="mono">Process</div>
+      <h2>Brief → Live.<br>Stupidly fast.</h2>
+    </div>
+    <div class="approach-track">
+      <div class="a-step">
+        <div class="a-num mono">01 — DISCOVER</div>
+        <h3>Free 30-min call</h3>
+        <p>You talk, we listen. No decks, no fluff.</p>
+        <div class="a-time">Day 1</div>
+      </div>
+      <div class="a-step">
+        <div class="a-num mono">02 — SCOPE</div>
+        <h3>Clear proposal in 24hrs</h3>
+        <p>Exact price. Exact timeline. Exact deliverables.</p>
+        <div class="a-time">Day 2</div>
+      </div>
+      <div class="a-step">
+        <div class="a-num mono">03 — BUILD</div>
+        <h3>Ship fast, share early</h3>
+        <p>You see progress daily. Feedback loop stays tight.</p>
+        <div class="a-time">Day 3–10</div>
+      </div>
+      <div class="a-step">
+        <div class="a-num mono">04 — LAUNCH</div>
+        <h3>Go live + 14 days support</h3>
+        <p>Deployed, tested, handed off. We stick around.</p>
+        <div class="a-time">Day 10+</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== CTA / CONTACT ====== -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-left">
+        <h2>Ready to ship<br>something real?</h2>
+        <p>Tell us what you're building. We'll tell you how fast we can get it live.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/919999999999?text=Hey%20Dash%20Labs!%20I%20want%20to%20discuss%20a%20project." class="btn-wa">💬 WhatsApp Us</a>
+          <a href="mailto:hello@dashlabs.in" class="btn-light">✉ Email</a>
+        </div>
+      </div>
+      <form class="cta-form" id="leadForm" onsubmit="handleSubmit(event)">
+        <div class="f-row">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="text" name="business" placeholder="Business name">
+        </div>
+        <div class="f-row">
+          <input type="tel" name="phone" placeholder="WhatsApp number" required>
+          <input type="email" name="email" placeholder="Email">
+        </div>
+        <select name="service" required>
+          <option value="" disabled selected>What do you need?</option>
+          <option>Website</option>
+          <option>WhatsApp Bot</option>
+          <option>AI Chatbot</option>
+          <option>AI Tool / LLM Wrapper</option>
+          <option>Micro-Site</option>
+          <option>Branding</option>
+          <option>Automation</option>
+          <option>Internal Tool</option>
+          <option>App MVP</option>
+          <option>Multiple services</option>
+          <option>Not sure yet</option>
+        </select>
+        <textarea name="details" placeholder="Anything else? Budget, timeline, wild ideas..."></textarea>
+        <button type="submit" class="cta-submit" id="submitBtn">Send enquiry →</button>
+        <p class="f-note">We reply within 4 hours. No spam, ever.</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <a href="#" class="logo">
+        <span class="logo-mark"><span></span><span></span><span></span><span></span></span>
+        DASH LABS
+      </a>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#approach">Process</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:hello@dashlabs.in">hello@dashlabs.in</a>
+      </div>
+      <div class="footer-copy">© 2026 Dash Labs</div>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/919999999999?text=Hey%20Dash%20Labs!" class="wa-float" aria-label="WhatsApp">💬</a>
+<script>
+function handleSubmit(e){
+  e.preventDefault();
+  const btn=document.getElementById('submitBtn');
+  const form=document.getElementById('leadForm');
+  btn.textContent='Sending...';btn.style.opacity='.7';btn.disabled=true;
+  const d=new FormData(form),lead={};
+  d.forEach((v,k)=>lead[k]=v);
+  setTimeout(()=>{
+    btn.textContent='✓ Sent — we\'ll ping you soon';
+    btn.style.background='#22C55E';btn.style.opacity='1';btn.disabled=false;
+    form.reset();console.log('Lead:',lead);
+    setTimeout(()=>{btn.textContent='Send enquiry →';btn.style.background='var(--accent)'},4000);
+  },1000);
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})
+},{threshold:.05});
+document.querySelectorAll('.b-card,.a-step').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(12px)';el.style.transition='all .45s ease';obs.observe(el);
+});
+</script>
+</body>
+</html>

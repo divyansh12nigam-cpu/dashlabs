@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dashlabs.co.in/sitemap.xml
