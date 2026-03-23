@@ -1,0 +1,9 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+httpx==0.25.2
+pydantic==1.10.13
+sqlalchemy==2.0.23
+aiosqlite==0.19.0
+greenlet==3.0.2
+aiosmtplib==3.0.1
+python-dotenv==1.0.0
