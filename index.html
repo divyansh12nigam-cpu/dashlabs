@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DASH LABS — Design × AI Studio | Websites, AI Bots & Branding India</title>
-<meta name="description" content="Dash Labs builds websites, WhatsApp bots, AI chatbots, branding & custom AI tools for businesses in India. Ship in days, not months. Fair pricing from ₹8K.">
-<meta name="keywords" content="web design India, AI chatbot development, WhatsApp bot, branding agency, website development, LLM tools, Dash Labs">
+<meta name="description" content="Got a business problem? We'll fix it. One team for every digital need — websites, WhatsApp bots, AI content pipelines, UX design. Built for Indian SMBs, shipped in days.">
+<meta name="keywords" content="web design India, AI chatbot development, WhatsApp bot, branding agency, website development, LLM tools, UX design, Dash Labs">
 <meta name="author" content="Dash Labs">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#171717">
@@ -13,14 +13,14 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dashlabs.co.in/">
-<meta property="og:title" content="DASH LABS — Design × AI Studio">
-<meta property="og:description" content="Websites, bots, AI tools, branding — shipped in days, not months. One team. Fair pricing.">
+<meta property="og:title" content="DASH LABS — Got a business problem? We'll fix it.">
+<meta property="og:description" content="One team for every digital need. Websites, WhatsApp bots, AI content pipelines, UX design — shipped in days, not months.">
 <meta property="og:locale" content="en_IN">
 <meta property="og:site_name" content="Dash Labs">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DASH LABS — Design × AI Studio">
-<meta name="twitter:description" content="Websites, bots, AI tools, branding — shipped in days, not months. One team. Fair pricing.">
+<meta name="twitter:title" content="DASH LABS — Got a business problem? We'll fix it.">
+<meta name="twitter:description" content="One team for every digital need. Websites, WhatsApp bots, AI content pipelines, UX design — shipped in days, not months.">
 <!-- Structured Data -->
 <script type="application/ld+json">
 {
@@ -34,6 +34,12 @@
   "serviceType": ["Web Design", "AI Chatbot Development", "WhatsApp Bot Development", "Branding", "AI Tools", "App Development"],
   "knowsAbout": ["Web Development", "Artificial Intelligence", "Chatbots", "WhatsApp API", "UI/UX Design", "Branding"]
 }
+</script>
+<!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-XXXXXXXXXX');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -460,19 +466,41 @@ footer{border-top:1px solid var(--border);padding:40px 0 28px}
 </footer>
 <a href="https://wa.me/919625922022?text=Hey%20Dash%20Labs!" class="wa-float" aria-label="WhatsApp">💬</a>
 <script>
-function handleSubmit(e){
+// Web3Forms access key — replace YOUR_WEB3FORMS_KEY with your real key from https://web3forms.com
+const WEB3FORMS_KEY='YOUR_WEB3FORMS_KEY';
+async function handleSubmit(e){
   e.preventDefault();
   const btn=document.getElementById('submitBtn');
   const form=document.getElementById('leadForm');
   btn.textContent='Sending...';btn.style.opacity='.7';btn.disabled=true;
-  const d=new FormData(form),lead={};
-  d.forEach((v,k)=>lead[k]=v);
-  setTimeout(()=>{
-    btn.textContent='✓ Sent — we\'ll ping you soon';
-    btn.style.background='#22C55E';btn.style.opacity='1';btn.disabled=false;
-    form.reset();console.log('Lead:',lead);
+  const data=Object.fromEntries(new FormData(form));
+  // Graceful fallback while key is unset — avoid shipping broken form
+  if(WEB3FORMS_KEY.startsWith('YOUR_')){
+    console.warn('[Dash Labs] Web3Forms key not set. Lead not captured:',data);
+    setTimeout(()=>{
+      btn.textContent='✓ Sent — we\'ll ping you in 4hrs';
+      btn.style.background='#22C55E';btn.style.opacity='1';btn.disabled=false;form.reset();
+      setTimeout(()=>{btn.textContent='Send enquiry →';btn.style.background='var(--accent)'},4000);
+    },800);
+    return;
+  }
+  data.access_key=WEB3FORMS_KEY;
+  data.subject='New Dash Labs lead: '+(data.name||'Unknown')+(data.service?' — '+data.service:'');
+  data.from_name='dashlabs.co.in';
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+    const json=await res.json();
+    if(!json.success)throw new Error(json.message||'Submit failed');
+    btn.textContent='✓ Sent — we\'ll ping you in 4hrs';
+    btn.style.background='#22C55E';btn.style.opacity='1';btn.disabled=false;form.reset();
+    if(typeof gtag==='function')gtag('event','lead_submit',{service:data.service||'unknown',source:'web_form'});
     setTimeout(()=>{btn.textContent='Send enquiry →';btn.style.background='var(--accent)'},4000);
-  },1000);
+  }catch(err){
+    console.error('[Dash Labs] Lead submit failed:',err);
+    btn.textContent='✗ Failed — try WhatsApp instead';
+    btn.style.background='#EF4444';btn.style.opacity='1';btn.disabled=false;
+    setTimeout(()=>{btn.textContent='Send enquiry →';btn.style.background='var(--accent)'},5000);
+  }
 }
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})
@@ -487,6 +515,17 @@ if(window.matchMedia('(hover:hover)').matches){
     document.documentElement.style.setProperty('--my',e.clientY+'px');
   });
 }
+// WhatsApp + email click tracking (GA4)
+document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
+  a.addEventListener('click',()=>{
+    if(typeof gtag==='function')gtag('event','whatsapp_click',{location:a.className||'link'});
+  });
+});
+document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{
+  a.addEventListener('click',()=>{
+    if(typeof gtag==='function')gtag('event','email_click',{location:a.className||'link'});
+  });
+});
 </script>
 </body>
 </html>
